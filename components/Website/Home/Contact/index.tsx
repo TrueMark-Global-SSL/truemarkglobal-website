@@ -174,8 +174,8 @@ const Contact = () => {
                 <a href="mailto:info@truemarkglobal.com" className="text-[#387467] hover:underline">info.truemarkglobal@gmail.com</a>
               </div>
               <div>
-                <h3 className="font-medium text-black dark:text-white">Call Us</h3>
-                <a href="tel:+2349057438835" className="text-[#387467]">+234 905 743 8835</a>
+                <h3 className="font-medium text-black dark:text-white">To reach us on WhatsApp via:</h3>
+                <a href="tel:+2349057438835" className="text-[#387467]">+234 0803 230 2557</a>
               </div>
             </div>
           </motion.div>
