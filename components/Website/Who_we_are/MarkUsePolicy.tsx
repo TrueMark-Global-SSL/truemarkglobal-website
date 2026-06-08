@@ -14,7 +14,7 @@ const MarkUsePolicy = () => {
       >
         {/* Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#387467]">
-          True-mark Certification Mark Use Policy
+          TrueMark Global Standards & Solutions Limited Certification Mark Use Policy
         </h2>
 
         {/* Purpose */}
@@ -22,17 +22,17 @@ const MarkUsePolicy = () => {
           <h3 className="text-2xl font-semibold text-[#387467]">Purpose</h3>
           <p>
             The purpose of this policy is to establish the rules and requirements for use of all
-            True-mark Trademarks and Certification Marks.
+            TrueMark Global Standards & Solutions Limited Certification Marks.
           </p>
         </div>
 
         {/* Ownership */}
         <div className="space-y-3">
           <h3 className="text-2xl font-semibold text-[#387467]">
-            True-mark Certification Mark Ownership
+            TrueMark Global Standards & Solutions Limited  Certification Mark Ownership
           </h3>
           <p>
-            The following organizational trademark is owned and controlled by True-mark:
+            The following organizational trademark is owned and controlled by TrueMark Global Standards & Solutions Limited:
           </p>
 
 
@@ -53,10 +53,10 @@ const MarkUsePolicy = () => {
         {/* Authorized Use */}
         <div className="space-y-3 mt-6">
           <h3 className="text-2xl font-semibold text-[#387467]">
-            Authorized Use of True-mark Certification Mark
+            Authorized Use of TrueMark Global Standards & Solutions Limited Certification Mark
           </h3>
           <p>
-            True-mark grants permission to use the True-mark Certification Marks to True-mark certified
+            TrueMark Global Standards & Solutions Limited
             professionals that have satisfied all applicable S&BP credentialing and certification
             requirements.
           </p>
@@ -85,16 +85,16 @@ const MarkUsePolicy = () => {
         {/* Policy Violation */}
         <div className="space-y-3">
           <h3 className="text-2xl font-semibold text-[#387467]">
-            True-mark Certification Mark Use Policy Violation
+            TrueMark Global Standards & Solutions Limited Limited Certification Mark Use Policy Violation
           </h3>
           <p>
             Upon receiving information about inappropriate or unauthorized use of the Certification
-            Mark, True-mark will take the following steps:
+            Mark, TrueMark Global Standards & Solutions Limited  will take the following steps:
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li>The alleged misuse will be reviewed.</li>
             <li>
-              If a policy violation is suspected, True-mark will contact the involved parties,
+              If a policy violation is suspected, TrueMark Global Standards & Solutions Limited  will contact the involved parties,
               requesting cessation of unauthorized use.
             </li>
             <li>

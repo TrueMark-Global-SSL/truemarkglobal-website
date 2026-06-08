@@ -71,7 +71,7 @@ const TM_Certifications = () => {
                      Safety Certification
                   </h3>
                   <p className="mt-4 text-1xl text-gray-700 dark:text-gray-300">
-                    TRUE-MARK GLOBAL ensures your processes, machinery, and products meet stringent health and safety standards.
+                    TrueMark Global Standards & Solutions Limited  ensures your processes, machinery, and products meet stringent health and safety standards.
                   </p>
                 </div>
                 <div>
@@ -124,7 +124,7 @@ const TM_Certifications = () => {
               <SectionHeader
                 headerInfo={{
                   title: `Certification Process`,
-                  subtitle: `Step-by-Step Certification Journey with TRUE-MARK GLOBAL`,
+                  subtitle: `Step-by-Step Certification Journey with TrueMark Global Standards & Solutions Limited`,
                 }}
               />
               <ul className="space-y-4 gap-8 text-1xl text-gray-700 dark:text-gray-300 mt-[3rem]">

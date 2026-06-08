@@ -13,15 +13,15 @@ const CodeOfEthics = () => {
       >
         {/* Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#387467]">
-          True-mark Code of Ethics
+          TrueMark Global Standards & Solutions Limited Code of Ethics
         </h2>
 
         {/* Purpose */}
         <div className="space-y-3">
           <h3 className="text-2xl font-semibold text-[#387467]">Purpose</h3>
           <p>
-            The purpose of this section is to establish a Code of Ethics for True-mark Personnel and True-mark Certified Professionals.
-            The True-mark Code of Conduct applies to all True-mark Professionals including certified individuals, clients, partners,
+            The purpose of this section is to establish a Code of Ethics for TrueMark Global Standards & Solutions Limited Certified Professionals.
+            The TrueMark Global Standards & Solutions Limited  Code of Conduct applies to all Professionals including certified individuals, clients, partners,
             trainers, auditors, employees, and other relevant stakeholders.
           </p>
         </div>
@@ -45,7 +45,7 @@ const CodeOfEthics = () => {
             <li>
               Do not intentionally communicate false or misleading information that could compromise candidate evaluation integrity.
             </li>
-            <li>Do not act in any manner that could compromise the reputation of True-mark or its certification programs.</li>
+            <li>Do not act in any manner that could compromise the reputation of TrueMark Global Standards & Solutions Limited Global Standards & Solutions Limited or its certification programs.</li>
             <li>Fully cooperate in any inquiry following a reported infringement of this Code of Ethics.</li>
           </ul>
         </div>
@@ -63,7 +63,7 @@ const CodeOfEthics = () => {
         <div className="space-y-3">
           <h3 className="text-2xl font-semibold text-[#387467]">Code of Ethics Evaluation</h3>
           <p>
-            Compliance with the True-mark Code of Ethics is essential for all True-mark professionals including employees,
+            Compliance with the TrueMark Global Standards & Solutions Limited professionals including employees,
             certified individuals, trainers, and partners. This compliance is monitored continuously and is part of each stakeholder’s performance evaluation.
           </p>
           <p>

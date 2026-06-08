@@ -13,12 +13,12 @@ const AboutInspection = () => {
             Inspection is a systematic, professional process of evaluating
             products, materials, equipment, or systems to confirm they
             meet defined standards, customer requirements, and
-            regulatory benchmarks. At TRUE-MARK GLOBAL, we deliver
+            regulatory benchmarks. At TrueMark Global Standards & Solutions Limited, we deliver
             end-to-end inspection solutions that safeguard product
             integrity, enhance safety, and reinforce brand confidence across sectors.
           </p>
           <p className="mt-4 text-base text-pretty text-gray-700 dark:text-gray-300 sm:text-lg/relaxed">
-            At TRUE-MARK GLOBAL, we deliver thorough,
+            At TrueMark Global Standards & Solutions Limited, we deliver thorough,
             professional, and independent inspection services
             tailored to help your business maintain integrity,
             ensure regulatory compliance, and exceed customer expectations.

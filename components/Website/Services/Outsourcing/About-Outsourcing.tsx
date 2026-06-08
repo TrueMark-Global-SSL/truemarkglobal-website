@@ -19,7 +19,7 @@ const AboutOutsourcing = () => {
             to manage those functions in-house
           </p>
           <p className="mt-4 text-base text-pretty text-gray-700 dark:text-gray-300 sm:text-lg/relaxed">
-            At TRUE-MARK GLOBAL, we offer comprehensive,
+            At TrueMark Global Standards & Solutions Limited, we offer comprehensive,
             scalable, and customized outsourcing solutions designed
             to meet your business objectives efficiently and effectively.
             Whether you are a startup, SME, or large corporation,

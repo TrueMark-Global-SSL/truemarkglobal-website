@@ -17,7 +17,7 @@ const RetakePolicy = () => {
         <section className="space-y-5">
           <h3 className="text-2xl font-semibold text-[#387467]">Purpose</h3>
           <p>
-            Truemark publishes this retake policy to uphold the integrity of its certification assessments and to provide clarity on retake procedures and eligibility.
+            TrueMark Global Standards & Solutions Limited publishes this retake policy to uphold the integrity of its certification assessments and to provide clarity on retake procedures and eligibility.
           </p>
         </section>
 

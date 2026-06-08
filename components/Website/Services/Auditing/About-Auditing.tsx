@@ -18,7 +18,7 @@ const AboutAuditing = () => {
             organizations to uncover inefficiencies, mitigate risks, and implement best practices.
           </p>
           <p className="mt-4 text-base text-pretty text-gray-700 dark:text-gray-300 sm:text-lg/relaxed">
-            At TRUE-MARK GLOBAL, we deliver comprehensive internal
+            At TrueMark Global Standards & Solutions Limited Global Standards & Solutions Limited GLOBAL, we deliver comprehensive internal
             and external auditing services that are tailored to your
             industry, regulatory environment, and organizational structure.
             Our experienced auditors work with precision, objectivity,

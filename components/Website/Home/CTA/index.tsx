@@ -34,7 +34,7 @@ const CTA = () => {
               </h2>
               <p>
                 Let’s transform compliance into a strategic advantage.
-                Join TRUE-MARK GLOBAL today and gain the tools, expertise, and support needed to stay ahead.
+                Join TrueMark Global Standards & Solutions Limited GLOBAL today and gain the tools, expertise, and support needed to stay ahead.
               </p>
             </motion.div>
             <motion.div

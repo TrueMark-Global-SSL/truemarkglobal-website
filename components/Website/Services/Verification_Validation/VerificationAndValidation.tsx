@@ -20,7 +20,7 @@ export default function VerificationAndValidation() {
               Verification & Validation Services
             </h2>
             <p className="text-lg mb-4">
-              At <strong>Truemark</strong>, a leading conformity assessment body,
+              At <strong>TrueMark Global Standards & Solutions Limited</strong>, a leading conformity assessment body,
               we specialize in providing comprehensive verification and validation
               services tailored to meet the unique needs of various industries.
               Our expert team ensures that your products, processes, and systems
@@ -86,7 +86,7 @@ export default function VerificationAndValidation() {
         >
           <div className="mt-[4rem]">
             <h2 className="text-2xl mb-[1rem] font-bold">
-              Why Choose Truemark?
+              Why Choose TrueMark Global Standards & Solutions Limited?
             </h2>
             <p className="text-lg mb-4">
               With our rigorous approach and industry expertise, we help

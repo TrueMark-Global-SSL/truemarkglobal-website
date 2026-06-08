@@ -16,7 +16,7 @@ const ComplaintsAppealsPolicy = () => {
         <section className="space-y-4">
           <h3 className="text-2xl font-semibold text-[#387467]">Complaints</h3>
           <p>
-            A complaint is an expression of dissatisfaction sent to Truemark Global Limited (TMGL), usually related to how we manage and deliver our services or to the performance of a TMGL certificate holder.
+            A complaint is an expression of dissatisfaction sent to TrueMark Global Standards & Solutions Limited Global Limited (TMGL), usually related to how we manage and deliver our services or to the performance of a TMGL certificate holder.
             Complaints can be raised by any stakeholder in the certification process – including existing customers, scheme owners, regulatory bodies, and third parties (e.g. a customer of our certified customer).
           </p>
           <p>
@@ -46,7 +46,7 @@ const ComplaintsAppealsPolicy = () => {
         <section className="space-y-4">
           <h3 className="text-2xl font-semibold text-[#387467]">Appeals</h3>
           <p>
-            An appeal can be raised when a stakeholder does not accept a decision made by Truemark Global Limited (TMGL) related to a certification.
+            An appeal can be raised when a stakeholder does not accept a decision made by TrueMark Global Standards & Solutions Limited Global Limited (TMGL) related to a certification.
           </p>
           <p>
             An appeal can be recorded by completing the designated form. The handling process is as follows:

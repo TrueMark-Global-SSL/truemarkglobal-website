@@ -20,7 +20,7 @@ const SectorsWeServe = () => {
         </span>
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">What We Do</h2>
         <p className="text-[15px] leading-relaxed text-slate-500">
-          At Truemark, we provide global standards and solutions tailored to various industries,
+          At TrueMark Global Standards & Solutions Limited, we provide global standards and solutions tailored to various industries,
           ensuring compliance and trust. Our expertise spans multiple sectors through 
           customized audit and conformity assessments.
         </p>

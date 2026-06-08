@@ -20,7 +20,7 @@ export default function AgricultureFoodBeverage() {
           <div>
             <h2 className="text-2xl mb-[1rem] font-bold">Agriculture</h2>
             <p className="text-lg mb-4">
-              TRUE-MARK helps maintain high standards for quality and safety in agricultural products. By adhering to these standards, producers can ensure their products are safe for consumption, free from harmful substances, and of consistent quality.
+              TrueMark Global Standards & Solutions Limited helps maintain high standards for quality and safety in agricultural products. By adhering to these standards, producers can ensure their products are safe for consumption, free from harmful substances, and of consistent quality.
             </p>
             <ul className="list-disc pl-5 gap-6 space-y-4">
               <li>Food safety standards, global GAP standards, food product certification.</li>
@@ -52,7 +52,7 @@ export default function AgricultureFoodBeverage() {
           <div>
             <h2 className="text-2xl mb-[1rem] font-bold">Food and Beverages</h2>
             <p className="text-lg mb-4">
-              TRUE-MARK offers a range of services designed to support the food and beverage industry in delivering high-quality, safe, and enjoyable products.
+              TrueMark Global Standards & Solutions Limited offers a range of services designed to support the food and beverage industry in delivering high-quality, safe, and enjoyable products.
             </p>
             <h3 className="text-1xl mb-3 font-semibold">Our Services Include:</h3>
 

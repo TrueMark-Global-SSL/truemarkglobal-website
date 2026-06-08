@@ -64,7 +64,7 @@ const TM_Outsourcing = () => {
               className="animate_right md:w-1/2"
             >
               <span className="font-bold uppercase text-black dark:text-white mb-8">
-                Why Choose TRUE-MARK GLOBAL?
+                Why Choose TrueMark Global Standards & Solutions Limited?
               </span>
 
               <div className="mt-7.5 flex items-center gap-5">

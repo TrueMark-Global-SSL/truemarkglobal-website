@@ -61,7 +61,7 @@ const Signin = () => {
       {/* ISO Professional Grid Overlay */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
 
-      <div className="relative z-10 w-full max-w-[460px] px-6">
+      <div className="relative z-10 w-full max-w-[560px] px-6">
         {/* Branding Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-[2rem] bg-[#387467] text-white mb-6 shadow-2xl shadow-[#387467]/20 border-4 border-white">

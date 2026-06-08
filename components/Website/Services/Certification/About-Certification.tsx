@@ -13,7 +13,7 @@ const AboutCertification = () => {
             Certification is the process of verifying and validating
             that a product, service, or system complies with recognized
             standards, industry best practices, and regulatory frameworks.
-            It provides formal acknowledgment that your offerings meet stringent quality, safety, and environmental benchmarks. At TRUE-MARK GLOBAL, we deliver end-to-end certification solutions designed
+            It provides formal acknowledgment that your offerings meet stringent quality, safety, and environmental benchmarks. At TrueMark Global Standards & Solutions Limited, we deliver end-to-end certification solutions designed
             to strengthen your compliance posture, assure stakeholders, and elevate your brand reputation
           </p>
 

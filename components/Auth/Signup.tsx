@@ -55,7 +55,7 @@ const Signup = () => {
       {/* ISO Grid Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-5 pointer-events-none bg-[url('/images/grid.svg')] bg-center"></div>
 
-      <div className="relative z-10 w-full max-w-[480px]">
+      <div className="relative z-10 w-full max-w-[560px]">
         {/* Header Section */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#387467] text-white mb-4 shadow-xl shadow-[#387467]/20">

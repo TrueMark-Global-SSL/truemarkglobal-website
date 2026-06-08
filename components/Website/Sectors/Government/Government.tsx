@@ -17,7 +17,7 @@ export default function Government_Policy() {
           <div>
             <h2 className="text-2xl mb-[1rem] font-bold">Governance and Policy</h2>
             <p className="text-lg mb-4">
-              At Truemark Global Limited (TMGL), we help organizations strengthen governance and policy frameworks
+              At TrueMark Global Standards & Solutions Limited (TMGL), we help organizations strengthen governance and policy frameworks
               through internationally recognized ISO standards. These certifications enhance compliance, transparency,
               and accountability, enabling businesses and public institutions to operate with integrity and resilience.
             </p>

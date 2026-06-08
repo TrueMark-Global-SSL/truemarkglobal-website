@@ -3,7 +3,7 @@ declare module "*.pdf" {
   export default src;
 }
 
-
+declare module "*.css";
 declare module 'react-pdf';
 
 declare module 'react-pdf' {

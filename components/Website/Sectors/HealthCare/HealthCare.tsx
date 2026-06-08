@@ -19,7 +19,7 @@ export default function HealthCare_Sector() {
           <div>
             <h2 className="text-2xl mb-[1rem] font-bold">Healthcare</h2>
             <p className="text-lg mb-4">
-              At TRUE-MARK, we support the healthcare sector with specialized certification and training
+              At TrueMark Global Standards & Solutions Limited, we support the healthcare sector with specialized certification and training
               services, ensuring medical organizations, devices, and personnel meet the highest international
               standards for safety, quality, and compliance. Our expertise spans from medical device and
               pharmaceutical certification to healthcare management systems and personnel qualifications.

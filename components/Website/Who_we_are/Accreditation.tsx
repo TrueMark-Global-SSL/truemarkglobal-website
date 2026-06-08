@@ -53,7 +53,7 @@ const AccreditationSection = () => {
         </h3>
 
         <p className="text-base md:text-lg leading-relaxed">
-          True-mark is an accredited Personnel Certification Body by the Nigeria National Accreditation
+          TrueMark Global Standards & Solutions Limited is an accredited Personnel Certification Body by the Nigeria National Accreditation
           Service (NiNAS) under ISO/IEC 17024 – Requirements for bodies operating certification of
           persons. To view the certificate, please{' '}
 

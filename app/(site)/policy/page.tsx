@@ -3,8 +3,8 @@ import ComplaintsAppealsPolicy from "@/components/Website/Who_we_are(cont1)/Comp
 import PrivacyPolicy from "@/components/Website/Who_we_are(cont1)/PrivacyPolicy";
 
 export const metadata: Metadata = {
-  title: "True-Mark Global Standards & Solutions Limited",
-  description: "Explore True-Mark Global expert services in E-Learning, ISO Certification, Auditing, Outsourcing, and Inspection — delivering quality, compliance, and professional excellence."
+  title: "TrueMark Global Standards & Solutions Limited",
+  description: "Explore TrueMark Global expert services in E-Learning, ISO Certification, Auditing, Outsourcing, and Inspection — delivering quality, compliance, and professional excellence."
 };
 
 export default function Home() {

@@ -41,7 +41,7 @@ const CertificationProcess = () => {
         <div className="space-y-3">
           <h3 className="text-2xl font-semibold text-[#387467]">Choose the Right Certification</h3>
           <p>
-            Each True-mark certification has specific education and experience requirements. Candidates
+            Each TrueMark Global Standards & Solutions Limited certification has specific education and experience requirements. Candidates
             must:
           </p>
           <ul className="list-disc pl-6 space-y-2">

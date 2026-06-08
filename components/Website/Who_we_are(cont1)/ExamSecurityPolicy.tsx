@@ -17,13 +17,13 @@ const ExamSecurityPolicy = () => {
         <section className="space-y-4">
           <h3 className="text-2xl font-semibold text-[#387467]">Purpose</h3>
           <p>
-            The purpose of this Exam Security Policy is to ensure the integrity, confidentiality, and security of courseware and exam content within Truemark. This policy outlines the guidelines and procedures for access control, management, and enforcement to protect exam materials from unauthorized access and distribution.
+            The purpose of this Exam Security Policy is to ensure the integrity, confidentiality, and security of courseware and exam content within TrueMark Global Standards & Solutions Limited. This policy outlines the guidelines and procedures for access control, management, and enforcement to protect exam materials from unauthorized access and distribution.
           </p>
         </section>
 
         <section className="space-y-4">
           <h3 className="text-2xl font-semibold text-[#387467]">Scope</h3>
-          <p>This policy applies to all individuals with access to Truemark’s courseware and exam systems, including students, instructors, and administrative staff.</p>
+          <p>This policy applies to all individuals with access to TrueMark Global Standards & Solutions Limited’s courseware and exam systems, including students, instructors, and administrative staff.</p>
         </section>
 
         <section className="space-y-6">
@@ -67,7 +67,7 @@ const ExamSecurityPolicy = () => {
         </section>
 
         <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-          Truemark reserves the right to investigate and take disciplinary actions against any breach of this policy.
+          TrueMark Global Standards & Solutions Limited reserves the right to investigate and take disciplinary actions against any breach of this policy.
         </p>
       </motion.div>
     </section>

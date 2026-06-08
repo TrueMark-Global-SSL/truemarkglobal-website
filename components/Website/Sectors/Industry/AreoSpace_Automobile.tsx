@@ -19,7 +19,7 @@ export default function Automotive_Sector() {
           <div>
             <h2 className="text-2xl mb-[1rem] font-bold">Automotive & Aerospace</h2>
             <p className="text-lg mb-4">
-              At TRUE-MARK, we provide comprehensive certification schemes, training, and assurance services
+              At TrueMark Global Standards & Solutions Limited, we provide comprehensive certification schemes, training, and assurance services
               for the automotive and aerospace industries — including support for electric vehicle ventures,
               battery degradation assessment, sustainability strategy, and product assurance — ensuring
               compliance with global standards, boosting efficiency, and enhancing market access.

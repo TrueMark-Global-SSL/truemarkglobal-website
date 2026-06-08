@@ -55,7 +55,7 @@ const TM_Training = () => {
               </span>
 
               <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300">
-                At Truemark, a trusted conformity assessment body, we offer
+                At TrueMark Global Standards & Solutions Limited, a trusted conformity assessment body, we offer
                 comprehensive training programs designed to enhance your
                 organization's capabilities in Quality Infrastructure Systems.
                 Our expert trainers provide professional development
