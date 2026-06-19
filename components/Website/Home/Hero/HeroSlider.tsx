@@ -5,134 +5,137 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
-import { CheckCircle, Globe, Shield } from "lucide-react";
+import { CheckCircle, Globe, Shield, ArrowRight } from "lucide-react";
 
 const slides = [
-  {
-    id: 1,
-    image: "/images/slide/Slide-1.jpg",
-    headline: "BECOME AN ENDORSED TRAINING PARTNER",
-    subHeadline: "Join a global network of accredited professionals. We provide the framework, you provide the expertise.",
-    highlight: "ISO 9001 Training for",
-    typedWords: ["Auditors", "Consultants", "Training Partners"],
-    buttons: [
-      { text: "Partner With Us", color: "bg-[#387467]", textColor: "text-white" },
-      { text: "Contact Support", color: "bg-white/10", textColor: "text-white" },
-    ],
-  },
-  {
+    {
     id: 2,
     image: "/images/slide/Slide-2.jpg",
-    headline: "GET ISO CERTIFIED FROM ANYWHERE",
+    headline: "Get ISO Certified From Anywhere",
     subHeadline: "Scale your professional credibility with our internationally recognized online certification programs.",
     highlight: "Empowering",
     typedWords: ["Quality Experts", "Remote Learners", "Compliance Officers"],
-    buttons: [
-      { text: "Explore Courses", color: "bg-[#387467]", textColor: "text-white" },
-      { text: "View Accreditations", color: "bg-white/10", textColor: "text-white" },
-    ],
+    primaryBtn: "Explore Courses",
+    secondaryBtn: "Accreditations",
   },
+  {
+    id: 1,
+    image: "/images/slide/Slide-1.jpg",
+    headline: "Become an Endorsed Training Partner",
+    subHeadline: "Join a global network of accredited professionals. We provide the framework, you provide the expertise.",
+    highlight: "ISO 9001 Training for",
+    typedWords: ["Auditors", "Consultants", "Partners"],
+    primaryBtn: "Partner With Us",
+    secondaryBtn: "Contact Support",
+  },
+
 ];
 
 export default function HeroSlider() {
   const settings = {
-    dots: true, // Added dots for better navigation
+    dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 1200, // Slightly slower for a more luxurious feel
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 5000, // Increased for readability
-    fade: true, // Smoother transition for text-heavy slides
+    autoplaySpeed: 6000,
+    fade: true,
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-black">
+      {/* Custom styles for Slick dots to make them look modern */}
+      <style jsx global>{`
+        .slick-dots { bottom: 30px; z-index: 30; }
+        .slick-dots li button:before { color: white; font-size: 12px; opacity: 0.5; }
+        .slick-dots li.slick-active button:before { color: #387467; opacity: 1; }
+      `}</style>
+
       <Slider {...settings}>
         {slides.map((slide) => (
-          <div key={slide.id}>
+          <div key={slide.id} className="outline-none focus:outline-none">
             <div
-              className="relative w-full flex items-center"
+              className="relative w-full flex items-center justify-start min-h-[90vh] md:min-h-[95vh]"
               style={{
                 backgroundImage: `url(${slide.image})`,
-                height: "93vh",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              {/* Darker Overlay for Text Contrast */}
-              <div className="absolute inset-0 bg-black/50 z-10" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
+              {/* Refined Overlays: Subtle vignette rather than heavy blackout */}
+              <div className="absolute inset-0 bg-black/30 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 w-full md:w-3/4" />
 
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                className="relative z-20 max-w-5xl px-6 md:px-16 lg:pl-[6rem]"
-              >
-                {/* Authority Badge */}
-                <div className="flex items-center gap-2 mb-6">
-                   <span className="bg-[#387467] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
-                     Global Standards
-                   </span>
-                   <div className="h-[1px] w-12 bg-white/30"></div>
-                </div>
+              <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="max-w-3xl bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 rounded-3xl shadow-2xl"
+                >
+                  {/* Authority Badge */}
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8 backdrop-blur-sm">
+                    <Shield className="text-[#387467] w-4 h-4" />
+                    <span className="text-white text-xs font-bold uppercase tracking-widest">
+                      Global Standards
+                    </span>
+                  </div>
 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6 uppercase tracking-tighter">
-                  {slide.headline}
-                </h1>
+                  {/* Typography: Switched from all-caps to Title Case for better readability */}
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+                    {slide.headline}
+                  </h1>
 
-                <div className="flex flex-col mb-8">
-                  <p className="text-lg md:text-xl text-gray-200 max-w-2xl font-medium leading-relaxed mb-4">
+                  <p className="text-lg md:text-xl text-gray-200 font-medium leading-relaxed mb-8 max-w-xl">
                     {slide.subHeadline}
                   </p>
-                  
-                  <div className="flex items-center gap-3">
-                    <span className="text-white text-2xl md:text-3xl font-bold tracking-tight">
-                        {slide.highlight}
+
+                  {/* Typed Text Section */}
+                  <div className="flex flex-wrap items-center gap-3 mb-10">
+                    <span className="text-white text-xl md:text-2xl font-semibold">
+                      {slide.highlight}
                     </span>
-                    <span className="text-[#387467] font-black bg-white px-3 py-1 rounded-lg">
+                    <span className="text-[#387467] font-bold bg-white px-4 py-2 rounded-xl text-xl md:text-2xl shadow-inner">
                       <ReactTyped
                         strings={slide.typedWords}
-                        style={{ fontSize: "28px" }}
-                        typeSpeed={80}
-                        backSpeed={50}
-                        backDelay={2000}
+                        typeSpeed={60}
+                        backSpeed={40}
+                        backDelay={2500}
                         loop
                       />
                     </span>
                   </div>
-                </div>
 
-                {/* Revived & Styled Buttons */}
-                <div className="flex flex-wrap gap-4 mb-12">
-                  {slide.buttons.map((btn, index) => (
-                    <button
-                      key={index}
-                      className={`${btn.color} ${btn.textColor} px-8 py-4 rounded-xl font-black text-[11px] uppercase tracking-[0.2em] hover:scale-105 transition-all active:scale-95 border border-white/10 backdrop-blur-sm`}
-                    >
-                      {btn.text}
+                  {/* Modern Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                    <button className="group relative flex items-center justify-center gap-3 bg-[#387467] text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide overflow-hidden transition-all hover:bg-[#2c5c52] hover:shadow-lg hover:shadow-[#387467]/30">
+                      {slide.primaryBtn}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
-                  ))}
-                </div>
+                    <button className="flex items-center justify-center px-8 py-4 rounded-xl font-bold text-sm text-white uppercase tracking-wide border border-white/30 hover:bg-white/10 transition-colors backdrop-blur-sm">
+                      {slide.secondaryBtn}
+                    </button>
+                  </div>
 
-                {/* Trust Indicators */}
-                <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10 max-w-2xl">
-                  <div className="flex items-center gap-3">
-                    <Shield className="text-[#387467]" size={20} />
-                    <span className="text-[10px] text-gray-300 font-bold uppercase tracking-wider">Accredited Certs</span>
+                  {/* Trust Indicators: Pill style */}
+                  <div className="flex flex-wrap items-center gap-4 pt-8 border-t border-white/20">
+                    <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                      <Shield className="text-[#387467] w-4 h-4" />
+                      <span className="text-[11px] text-gray-200 font-bold uppercase tracking-wider">Accredited</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                      <Globe className="text-[#387467] w-4 h-4" />
+                      <span className="text-[11px] text-gray-200 font-bold uppercase tracking-wider">Worldwide</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                      <CheckCircle className="text-[#387467] w-4 h-4" />
+                      <span className="text-[11px] text-gray-200 font-bold uppercase tracking-wider">ISO Compliant</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Globe className="text-[#387467]" size={20} />
-                    <span className="text-[10px] text-gray-300 font-bold uppercase tracking-wider">Worldwide Access</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="text-[#387467]" size={20} />
-                    <span className="text-[10px] text-gray-300 font-bold uppercase tracking-wider">ISO Compliance</span>
-                  </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </div>
           </div>
         ))}

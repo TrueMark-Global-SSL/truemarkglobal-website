@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <main>
       <HeroSlider />
+      {/* <HeroSlider /> */}
       <Hero />
       <Brands />
       <Feature />
@@ -27,12 +28,6 @@ export default function Home() {
       <Contact />
 
 
-      {/*<About />*/}
-      {/*<FunFact />*/}
-      {/*<Integration />*/}
-      {/*<Testimonial />*/}
-      {/*<Pricing />*/}
-      {/*<Certifications />*/}
     </main>
   );
 }

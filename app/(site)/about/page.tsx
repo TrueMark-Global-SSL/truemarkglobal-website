@@ -14,7 +14,6 @@ export default function Home() {
       <AboutHero />
       <AboutTM />
       <SectorsWeServe/>
-
     </main>
   );
 }

@@ -4,12 +4,8 @@ import Course_Hero from "@/components/Website/Certifications/Course_Hero";
 import CourseListing from "@/components/Website/Certifications/CourseListing";
 
 
-
-
 const CoursePage =  () => {
   const [activeCategory, setActiveCategory] = useState("All");
-
-
 
   return (
     <>

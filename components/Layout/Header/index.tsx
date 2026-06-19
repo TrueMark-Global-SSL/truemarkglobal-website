@@ -129,7 +129,22 @@ const Header = () => {
           </nav>
 
           {/* Auth Buttons */}
-          <div className="flex flex-col gap-3 p-4 xl:flex-row xl:items-center xl:gap-5 xl:p-0 border-t border-gray-50 xl:border-0">
+          {/* Auth Buttons */}
+                <div className="flex flex-col gap-3 p-4 xl:flex-row xl:items-center xl:gap-5 xl:p-0 border-t border-gray-50 xl:border-0">
+                  <a
+                    href={process.env.NEXT_PUBLIC_LOGIN_URL}
+                    className="text-[13.5px] font-bold text-slate-600 hover:text-[#387467] text-center transition-colors"
+                  >
+                    Log In
+                  </a>
+                  <a
+                    href={process.env.NEXT_PUBLIC_REGISTER_URL}
+                    className="flex items-center justify-center rounded-lg bg-[#387467] px-5 py-2 text-[13.5px] font-bold text-white shadow-sm hover:bg-[#2d5e53] transition-all"
+                  >
+                    Sign Up
+                  </a>
+                </div>
+          {/* <div className="flex flex-col gap-3 p-4 xl:flex-row xl:items-center xl:gap-5 xl:p-0 border-t border-gray-50 xl:border-0">
             <Link
               href="/signin"
               className="text-[13.5px] font-bold text-slate-600 hover:text-[#387467] text-center transition-colors"
@@ -142,7 +157,7 @@ const Header = () => {
             >
               Sign Up
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
