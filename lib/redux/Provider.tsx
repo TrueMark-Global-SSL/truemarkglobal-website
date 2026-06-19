@@ -2,7 +2,7 @@
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { Toaster } from "react-hot-toast";
-import { SidebarProvider } from "@/components/dashboard/context/SidebarContext";
+// import { SidebarProvider } from "@/components/dashboard/context/SidebarContext";
 import useAppSecurity from "@/components/hooks/useAppSecurity";
 import AnimatedCursor from "@/components/utility/AnimatedCursor";
 
@@ -18,11 +18,11 @@ export function ReduxProvider({ children }: { children: React.ReactNode }) {
   return (
     <Provider store={store}>
       <SecurityLogic>
-        <SidebarProvider>
+        {/* <SidebarProvider> */}
           {children}
               <Toaster position="bottom-right" />
           <AnimatedCursor />
-        </SidebarProvider>
+        {/* </SidebarProvider> */}
       </SecurityLogic>
     </Provider>
   );
