@@ -1,10 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useSubmitEnquiryMutation } from "@/lib/redux/features/courses/commerceApi";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Full name is required"),
@@ -17,46 +15,49 @@ const validationSchema = Yup.object({
   message: Yup.string().min(10, "Message must be at least 10 characters").required("Message is required"),
 });
 
-const Contact = () => {
-  const [showSuccess, setShowSuccess] = useState(false);
-  
-  // ✅ Initialize RTK Query Mutation
-  const [submitEnquiry, { isLoading, error: apiError }] = useSubmitEnquiryMutation();
+const initialValues = {
+  name: "",
+  email: "",
+  phoneNumber: "",
+  subject: "",
+  message: "",
+};
 
-  // Auto-hide success message
-  useEffect(() => {
-    if (showSuccess) {
-      const timer = setTimeout(() => setShowSuccess(false), 5000);
-      return () => clearTimeout(timer);
+const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  const handleSubmit = async (values: typeof initialValues, { resetForm }: any) => {
+    setIsLoading(true);
+    setIsSuccess(false);
+    setIsError(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (res.ok) {
+        setIsSuccess(true);
+        resetForm();
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        setIsError(true);
+        setTimeout(() => setIsError(false), 5000);
+      }
+    } catch {
+      setIsError(true);
+      setTimeout(() => setIsError(false), 5000);
+    } finally {
+      setIsLoading(false);
     }
-  }, [showSuccess]);
+  };
 
   const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      phoneNumber: "",
-      subject: "",
-      message: "",
-    },
+    initialValues,
     validationSchema,
-    onSubmit: async (values, { resetForm }) => {
-      try {
-        // ✅ Call the RTK Query mutation
-        await submitEnquiry({
-          name: values.name,
-          email: values.email,
-          phoneNumber: values.phoneNumber,
-          subject: values.subject,
-          message: values.message,
-        }).unwrap(); // .unwrap() allows us to catch errors in the try/catch block
-
-        setShowSuccess(true);
-        resetForm();
-      } catch (err) {
-        console.error("Enquiry failed:", err);
-      }
-    },
+    onSubmit: handleSubmit,
   });
 
   return (
@@ -141,12 +142,12 @@ const Contact = () => {
               </button>
 
               {/* API Feedback */}
-              {apiError && (
+              {isError && (
                 <div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded text-center">
                   Something went wrong. Please try again.
                 </div>
               )}
-              {showSuccess && (
+              {isSuccess && (
                 <div className="p-3 text-sm text-green-600 bg-green-50 border border-green-200 rounded text-center animate-pulse">
                   Message sent successfully! We'll get back to you shortly.
                 </div>
@@ -171,11 +172,11 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-medium text-black dark:text-white">Email</h3>
-                <a href="mailto:info@truemarkglobal.com" className="text-[#387467] hover:underline">info.truemarkglobal@gmail.com</a>
+                <a href="mailto:info@truemarkglobal.com" className="text-[#387467] hover:underline">info@truemarkglobal.com</a>
               </div>
               <div>
                 <h3 className="font-medium text-black dark:text-white">To reach us on WhatsApp via:</h3>
-                <a href="tel:+2349057438835" className="text-[#387467]">+234 0803 230 2557</a>
+                <a href="tel:+2348032302557" className="text-[#387467]">+234 0803 230 2557</a>
               </div>
             </div>
           </motion.div>

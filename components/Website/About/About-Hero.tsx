@@ -17,7 +17,7 @@ const AboutHero = () => {
             animate={{ opacity: 1, y: 0 }}
             className="mb-4 text-[11px] font-black uppercase tracking-[0.3em] text-[#387467]"
           >
-            About TrueMark Global Standards & Solutions Limited Global Standards & Solutions Limited Global
+            About TrueMark Global Standards & Solutions Limited
           </motion.span>
 
           {/* Main Display Heading */}
@@ -48,7 +48,7 @@ const AboutHero = () => {
             className="max-w-3xl"
           >
             <p className="text-lg leading-relaxed text-slate-600 mb-6">
-              TrueMark Global Standards & Solutions Limited Global Standards & Solutions Limited Global Standards & Solutions Limited was founded on a simple but powerful belief: 
+              TrueMark Global Standards & Solutions Limited (TMGSS) was founded on a simple but powerful belief:
               <span className="font-semibold text-slate-900"> African businesses deserve to compete fairly, confidently, and successfully on the world stage.</span>
             </p>
 

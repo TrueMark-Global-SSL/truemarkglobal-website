@@ -149,6 +149,26 @@ const menuData: Menu[] = [
   },
 
   {
+    id: 7,
+    title: "Platforms",
+    newTab: false,
+    submenu: [
+      {
+        id: 701,
+        title: "CLMEP — Certification Platform",
+        newTab: true,
+        path: "https://certify.truemarkglobal.com",
+      },
+      {
+        id: 702,
+        title: "Truvera — Conformity Assessment Platform",
+        newTab: true,
+        path: "https://app.truemarkglobal.com",
+      },
+    ],
+  },
+
+  {
     id: 6,
     title: "Policy",
     newTab: false,

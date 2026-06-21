@@ -2,7 +2,7 @@ export const aboutContent = {
   section1: {
     image: "/images/about/photo1.jpg",
     title: "Our Core Values",
-    intro: "At True-mark Global standards and solutions limited, we are guided by four core values that define our approach to conformity assessment services:",
+    intro: "At TrueMark Global Standards & Solutions Limited (TMGSS), we are guided by four core values that define our approach to conformity assessment services:",
      pillars : [
       {
         num: "01",
