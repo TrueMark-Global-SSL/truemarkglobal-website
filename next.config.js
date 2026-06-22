@@ -76,10 +76,6 @@ const nextConfig = {
     return config;
   },
 
-  // ✅ Suppress minor hydration warnings during Redux/LMS state sync
-  devIndicators: {
-    appIsrStatus: false,
-  },
 };
 
 module.exports = nextConfig;
