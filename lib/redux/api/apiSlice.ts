@@ -10,9 +10,9 @@ export const apiSlice = createApi({
   reducerPath: 'api', // The key in the Redux store
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL,
-    prepareHeaders: (headers, { getState }) => {
+    prepareHeaders: (headers) => {
       // Pull token from localStorage for ISO-compliant session handling
-      const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
+      const token = typeof window !== 'undefined' ? sessionStorage.getItem('token') : null;
       
       if (token) {
         headers.set('authorization', `Bearer ${token}`);

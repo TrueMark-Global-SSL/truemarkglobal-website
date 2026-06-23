@@ -22,7 +22,7 @@ export const unauthenticatedMiddleware: Middleware = ({ dispatch }) => (next) =>
 
       // 2. Wipe Persistence
       if (typeof window !== "undefined") {
-        localStorage.removeItem("token");
+        sessionStorage.removeItem("token");
         
         // 3. Redirect to login (Avoid redirecting if already on signin)
         if (!window.location.pathname.includes("/signin")) {

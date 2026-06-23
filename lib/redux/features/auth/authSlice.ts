@@ -17,7 +17,7 @@ interface AuthState {
 
 const initialState: AuthState = {
   user: null,
-  token: typeof window !== "undefined" ? localStorage.getItem("token") : null,
+  token: typeof window !== "undefined" ? sessionStorage.getItem("token") : null,
   isAuthenticated: false,
   loading: false,
 };
@@ -30,7 +30,7 @@ const authSlice = createSlice({
       state.token = action.payload.token;
       state.isAuthenticated = true;
      if (typeof window !== "undefined") {
-      localStorage.setItem("token", action.payload.token);
+      sessionStorage.setItem("token", action.payload.token);
     }
     },
     clearAuth: (state) => {
@@ -42,7 +42,7 @@ const authSlice = createSlice({
       state.user = null;
       state.token = null;
       state.isAuthenticated = false;
-      localStorage.removeItem("token");
+      sessionStorage.removeItem("token");
     },
     setLoading: (state, action: PayloadAction<boolean>) => {
       state.loading = action.payload;
