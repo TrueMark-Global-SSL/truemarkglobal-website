@@ -2,6 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  productionBrowserSourceMaps: false,
 
 
   // ✅ Modern Next.js 15 Image Optimization
