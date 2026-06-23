@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-40 pb-20">
       <AboutHero />
       <AboutTM />
       <SectorsWeServe/>

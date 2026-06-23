@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "True-Mark Global Standards & Solutions Limited",
-  description: "Explore True-Mark Global expert services in E-Learning, ISO Certification, Auditing, Outsourcing, and Inspection — delivering quality, compliance, and professional excellence."
+  title: "Error | TrueMark Global Standards & Solutions Limited",
+  description: "Explore TrueMark Global expert services in E-Learning, ISO Certification, Auditing, Outsourcing, and Inspection — delivering quality, compliance, and professional excellence."
 };
 
 const ErroPage = () => {

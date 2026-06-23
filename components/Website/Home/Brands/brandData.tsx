@@ -5,7 +5,7 @@ const brandData = [
     id: 23,
     title: "Sector",
     submenu: [
-      { id: 31, title: "Energy", path: "/energy_sector" },
+      { id: 31, title: "Energy Sector", path: "/energy_sector" },
       { id: 32, title: "Food and Agriculture", path: "/food_and_agriculture" },
       { id: 33, title: "Industrial Sector", path: "/industrial_sector" },
       { id: 34, title: "Automotive Sector", path: "/automotive_Sector" },

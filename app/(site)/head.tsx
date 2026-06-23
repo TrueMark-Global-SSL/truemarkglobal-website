@@ -1,9 +1,9 @@
 export default function Head() {
   return (
     <>
-      <title> True-Mark Global Standards & Solutions Limited</title>
+      <title>TrueMark Global Standards &amp; Solutions Limited</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta name="description" content="Explore True-Mark Global expert services in E-Learning, ISO Certification, Auditing, Outsourcing, and Inspection — delivering quality, compliance, and professional excellence." />
+      <meta name="description" content="TrueMark Global Standards and Solutions Limited (TMGSSL) is Nigeria's leading conformity assessment body. Expert ISO certification, auditing, inspection, and technical outsourcing solutions." />
       <link rel="icon" href="/images/favicon.ico" />
     </>
   );

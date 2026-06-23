@@ -1,90 +1,95 @@
 export const aboutContent = {
   section1: {
-    image: "/images/about/photo1.jpg",
     title: "Our Core Values",
-    intro: "At TrueMark Global Standards & Solutions Limited (TMGSS), we are guided by four core values that define our approach to conformity assessment services:",
-     pillars : [
+    intro: "At TrueMark Global Standards and Solutions Limited (TMGSSL), every decision, audit, and certificate we issue is guided by five core values that define our character as a conformity assessment body.",
+    pillars: [
       {
         num: "01",
+        icon: "ShieldCheck",
         title: "Integrity",
-        desc: "We operate with unwavering integrity, meaning what we say and saying what we mean. Our words and actions are aligned, ensuring transparency and honesty in all our interactions.",
+        desc: "We mean what we say and say what we mean. Our words and actions are aligned, ensuring transparency and honesty in every client interaction.",
       },
       {
         num: "02",
+        icon: "Lock",
         title: "Confidentiality",
-        desc: "We protect your vital information with utmost confidentiality, using it only for its intended purpose. You can trust us to safeguard your sensitive data.",
+        desc: "We protect your sensitive information with the highest standards of confidentiality, using it solely for its intended purpose.",
       },
       {
         num: "03",
+        icon: "Users",
         title: "Trust",
-        desc: "We earn and maintain trust by being reliable, dependable, and committed to our clients' success. Your business is in safe hands with us.",
+        desc: "Trust is earned through consistency. We are reliable, dependable, and committed to our clients' long-term success.",
       },
       {
         num: "04",
+        icon: "Award",
         title: "Excellence",
-        desc: "Excellence is our standard. Every service we deliver is characterized by a relentless pursuit of perfection, ensuring exceptional quality and value.",
+        desc: "Excellence is our baseline. Every service we deliver is characterized by a relentless pursuit of quality and value.",
       },
       {
         num: "05",
+        icon: "Scale",
         title: "Impartiality",
-        desc: `We uphold impartiality in all our certification activities, ensuring fairness and objectivity. Our decisions are based solely on evidence, free from:\n\n• Bias: No personal or organizational prejudices influence our judgments.\n• Conflicts of Interest: We avoid any conflicts that could impact our decisions.\n• Undue Influence: Our assessments are not swayed by external pressures or interests.`,
+        desc: "Our certification decisions are based solely on objective evidence — free from bias, conflicts of interest, and undue external influence.",
       },
       {
         num: "06",
+        icon: "Star",
         title: "Our Promise",
-        desc: "By living these core values, we promise to deliver conformity assessment services that exceed your expectations, build trust, and drive your business forward.",
+        desc: "By living these values daily, we promise conformity assessment services that exceed expectations, build trust, and drive your business forward.",
       },
-    ]
-
+    ],
   },
 
   section2: {
     image: "/images/about/photo2.jpg",
     visionHeading: "The Key Benefits",
-    visionSub: "Our conformity assessment services offer numerous benefits, including:",
-     benefits: [
+    visionSub: "What certification with TMGSSL means for your organisation",
+    benefits: [
       {
         num: "01",
         title: "Access Global Markets",
-        desc: "Compete favorably in international markets with our certification, opening doors to new opportunities and customers worldwide.",
+        desc: "Our internationally aligned certifications open doors to trade partnerships, tenders, and markets that require recognised compliance credentials.",
       },
       {
         num: "02",
-        title: "Meet Food Safety Standards",
-        desc: "Align with global food safety and quality standards, ensuring your products meet the highest requirements.",
+        title: "Demonstrate Regulatory Compliance",
+        desc: "Stay ahead of regulatory requirements. Our audits and certifications give regulators, clients, and partners the assurance they need.",
       },
       {
         num: "03",
         title: "Boost Business Credibility",
-        desc: "Gain buyer trust with official certification, enjoying global recognition and acceptance of our certificates. Enhance your reputation and build confidence with stakeholders.",
+        desc: "An TMGSSL certificate signals commitment to quality. Build stakeholder confidence, win more business, and strengthen your brand reputation.",
       },
       {
         num: "04",
-        title: "Global Recognition",
-        desc: "Our services enable businesses to access global markets, meet stringent standards, and establish credibility, driving growth and success.",
+        title: "Drive Continuous Improvement",
+        desc: "Certification is not an endpoint. Our process identifies gaps and opportunities, embedding a culture of continuous improvement into your operations.",
       },
-    ]
-
+    ],
   },
 };
 
-
-
 export const sectorsData = [
   {
+    num: "01",
     title: "Certification & Conformity Assessment",
-    desc: `We assess and certify that organizations, products, processes, and people meet internationally recognized standards such as ISO 9001 (Quality), ISO 14001 (Environment), ISO 45001 (Occupational Health & Safety), and others.\nOur certification demonstrates to clients, partners, and regulators that your organization is committed to quality, safety, and continual improvement.`,
+    desc: "We assess and certify that organisations, products, processes, and people meet internationally recognised standards including ISO 9001, ISO 14001, ISO 45001, and others. Our certification demonstrates to clients, partners, and regulators that your organisation is committed to quality, safety, and continual improvement.",
   },
   {
+    num: "02",
     title: "Inspections & Audits",
-    desc: `We conduct independent audits and inspections to verify compliance, identify weaknesses, and recommend strategic improvements.\nOur goal is to help organizations maintain high performance standards, manage risks, and stay compliant with local and international requirements.`,
+    desc: "We conduct independent audits and inspections to verify compliance, identify weaknesses, and recommend strategic improvements. Our goal is to help organisations maintain high performance standards, manage risks, and stay compliant with local and international requirements.",
   },
   {
+    num: "03",
     title: "Training & Capacity Building",
-    desc: `We equip professionals and organizations with practical knowledge on international standards and best practices.\nOur training programs prepare your personnel for certification, improve operational efficiency, and instill a culture of continuous improvement.`,
+    desc: "We equip professionals and organisations with practical knowledge on international standards and best practices. Our training programmes prepare your personnel for certification, improve operational efficiency, and instil a culture of continuous improvement.",
   },
   {
+    num: "04",
     title: "Advisory & Continuous Support",
-    desc: `TrueMark provides continuous support to organizations, guiding them through the implementation of best practices and helping them sustain compliance.\nOur advisory services go beyond certification — we focus on building systems that ensure long-term operational excellence and global competitiveness.`,
+    desc: "TrueMark Global Standards and Solutions Limited (TMGSSL) provides continuous support, guiding organisations through the implementation of best practices and helping them sustain compliance. Our advisory services focus on building systems that ensure long-term operational excellence and global competitiveness.",
   },
 ];

@@ -1,40 +1,24 @@
 import React from "react";
 import { Feature } from "@/types/feature";
-import Image from "next/image";
-import { motion } from "framer-motion";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, description } = feature;
+  const { icon: Icon, title, description } = feature;
 
   return (
-    <>
-      <motion.div
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: -10,
-          },
+    <div className="flex flex-col h-full rounded-2xl border border-gray-100 bg-white p-7 shadow-sm hover:shadow-md hover:border-[#387467]/20 transition-all duration-300">
+      {/* Icon — fixed-height block so titles line up across all cards */}
+      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-[#387467] shrink-0">
+        <Icon size={26} color="white" strokeWidth={1.75} />
+      </div>
 
-          visible: {
-            opacity: 1,
-            y: 0,
-          },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-8.5"
-      >
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#387467]">
-          <Image src={icon} width={36} height={36} alt="title" />
-        </div>
-        <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
-          {title}
-        </h3>
-        <p className='text-sm'>{description}</p>
-      </motion.div>
-    </>
+      <h3 className="mb-3 text-[1.05rem] font-bold text-slate-800 leading-snug">
+        {title}
+      </h3>
+
+      <p className="text-sm text-slate-500 leading-relaxed">
+        {description}
+      </p>
+    </div>
   );
 };
 

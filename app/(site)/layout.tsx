@@ -1,7 +1,6 @@
 "use client";
 import Footer from "components/Layout/Footer";
 import Header from "components/Layout/Header";
-import Lines from "components/Website/Lines";
 import ScrollToTop from "components/Website/ScrollToTop";
 import "../globals.css";
 import NextTopLoader from "nextjs-toploader";
@@ -33,7 +32,6 @@ export default function RootLayout({
         {/*  defaultTheme="light"*/}
         {/*>*/}
 
-          <Lines />
           <Header />
       
           {children}

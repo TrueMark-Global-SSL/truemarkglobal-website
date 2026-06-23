@@ -100,3 +100,16 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* 6. HERO SLIDER DOTS — must be here, style jsx global is unreliable in App Router */
+.hero-slider .slick-dots { bottom: 24px; z-index: 30; }
+.hero-slider .slick-dots li button:before { display: none; }
+.hero-slider .slick-dots li button {
+  width: 28px;
+  height: 5px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.hero-slider .slick-dots li.slick-active button { background: #387467; width: 44px; }

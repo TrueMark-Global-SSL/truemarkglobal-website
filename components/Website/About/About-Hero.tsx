@@ -48,7 +48,7 @@ const AboutHero = () => {
             className="max-w-3xl"
           >
             <p className="text-lg leading-relaxed text-slate-600 mb-6">
-              TrueMark Global Standards & Solutions Limited (TMGSS) was founded on a simple but powerful belief:
+              TrueMark Global Standards &amp; Solutions Limited (TMGSSL) was founded on a simple but powerful belief:
               <span className="font-semibold text-slate-900"> African businesses deserve to compete fairly, confidently, and successfully on the world stage.</span>
             </p>
 

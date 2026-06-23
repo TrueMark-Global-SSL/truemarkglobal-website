@@ -1,49 +1,49 @@
 import { Feature } from "@/types/feature";
+import { GraduationCap, ClipboardCheck, ShieldCheck, BarChart2, Award, Target } from "lucide-react";
 
 const featuresData: Feature[] = [
   {
     id: 1,
-    icon: "/images/icon/icon-01.svg",
+    icon: GraduationCap,
     title: "Training & Certification",
     description:
-      "Build Capability. Ensure Compliance.\n\nWe equip your workforce and management teams with globally recognized training and certification programs that strengthen competence, improve performance, and align with international best practices.",
+      "We equip your workforce and management teams with globally recognised training and certification programmes that strengthen competence, improve performance, and align with international best practices.",
   },
   {
     id: 2,
-    icon: "/images/icon/icon-02.svg",
+    icon: ClipboardCheck,
     title: "Inspection",
     description:
-      "Independent. Impartial. Reliable.\n\nOur inspection services verify that your products, systems, and operations meet established standards of quality, safety, and regulatory compliance — helping you identify gaps and improve efficiency.",
+      "Our inspection services verify that your products, systems, and operations meet established standards of quality, safety, and regulatory compliance, helping you identify gaps and improve operational efficiency.",
   },
   {
     id: 3,
-    icon: "/images/icon/icon-03.svg",
+    icon: ShieldCheck,
     title: "Verification & Validation",
     description:
-      "Trust Through Transparency.\n\nWe confirm that your processes, systems, and operations conform to international requirements — ensuring sustained compliance, operational integrity, and stakeholder confidence.",
+      "We confirm that your processes, systems, and operations conform to international requirements, ensuring sustained compliance, operational integrity, and stakeholder confidence.",
   },
   {
     id: 4,
-    icon: "/images/icon/icon-05.svg",
+    icon: BarChart2,
     title: "Real-Time Progress Tracking",
     description:
-      "Stay Informed. Stay Ahead.\n\nLearners and HR teams can track course progress, exam status, and certificate issuance from a unified overview.",
+      "Learners and HR teams can monitor course progress, examination status, and certificate issuance from a single unified dashboard, keeping everyone informed at every stage.",
   },
   {
     id: 5,
-    icon: "/images/icon/icon-06.svg",
+    icon: Award,
     title: "Digital Certificates & Verification",
     description:
-      "Instantly Verifiable. Globally Trusted.\n\nWe issue secure, QR-coded digital certificates that can be instantly verified by employers, regulators, and partners — ensuring authenticity, transparency, and confidence in every credential.",
+      "We issue secure, QR-coded digital certificates that can be instantly verified by employers, regulators, and partners, ensuring authenticity, transparency, and confidence in every credential.",
   },
   {
     id: 6,
-    icon: "/images/icon/icon-04.svg",
+    icon: Target,
     title: "Our Commitment",
     description:
-      "We help organizations do things right — the first time and every time.\n\nBy aligning with global standards, TrueMark helps you build trust, enhance efficiency, and position your business for sustainable growth in a competitive world.",
+      "We help organisations do things right, the first time and every time. By aligning with global standards, TMGSSL helps you build trust, enhance efficiency, and position your business for sustainable growth.",
   },
 ];
 
 export default featuresData;
-

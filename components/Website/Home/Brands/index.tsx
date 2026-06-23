@@ -15,12 +15,12 @@ const Brands = () => {
         
         {/* Optional: Small Label for context */}
         <div className="text-center mb-6">
-          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#387467] bg-[#387467]/5 px-4 py-1.5 rounded-full">
+          <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#387467] bg-[#387467]/5 px-4 py-1.5 rounded-full">
             Our ISO Standards & Compliance Modules
           </span>
         </div>
 
-        <div className="relative flex overflow-x-hidden">
+        <div className="relative flex overflow-hidden">
           <motion.div
             className="flex items-center whitespace-nowrap gap-8"
             animate={{ x: ["0%", "-33.33%"] }} // Adjusted for the 3x multiplier
@@ -34,17 +34,15 @@ const Brands = () => {
               <Link
                 key={index}
                 href={item?.path || "#"}
-                className="group flex items-center gap-3 px-6 py-3 rounded-xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:border-[#387467]/30 hover:shadow-sm transition-all duration-300"
+                className="group flex items-center justify-between w-[230px] shrink-0 px-5 py-3 rounded-xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:border-[#387467]/30 hover:shadow-sm transition-all duration-300"
               >
-                {/* Minimalist Icon/Dot */}
-                <div className="w-1.5 h-1.5 rounded-full bg-[#387467] group-hover:scale-150 transition-transform" />
-                
-                <span className="text-sm font-bold text-slate-700 group-hover:text-[#387467] tracking-tight">
-                  {item?.title}
-                </span>
-
-                {/* Optional: Subtle "Verified" badge style */}
-                <span className="text-[9px] font-black text-gray-300 group-hover:text-[#387467]/50 uppercase tracking-tighter ml-2">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#387467] shrink-0 group-hover:scale-150 transition-transform" />
+                  <span className="text-sm font-bold text-slate-700 group-hover:text-[#387467] tracking-tight">
+                    {item?.title}
+                  </span>
+                </div>
+                <span className="text-[9px] font-black text-gray-300 group-hover:text-[#387467]/50 uppercase tracking-tighter shrink-0">
                   ISO
                 </span>
               </Link>

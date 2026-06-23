@@ -57,7 +57,7 @@ export function GlobalLoader () {
       <div className="absolute bottom-10 flex items-center gap-2 opacity-40">
         <div className="w-2 h-2 rounded-full bg-[#387467] animate-bounce" />
         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-600">
-          Truemark Digital Standards
+          TrueMark Global Standards
         </span>
       </div>
     </div>

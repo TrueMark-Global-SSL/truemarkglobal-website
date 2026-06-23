@@ -8,12 +8,12 @@ import Sub_Logo from "public/assets/Logo/logo1.png"
 export function PrimaryLogo() {
   return (
     <Image
-      // src={"/assets/Logo/logo.png"}
       src={Main_Logo}
-      alt="logo"
-      width={200}
-      height={54}
+      alt="TMGSSL Logo"
+      width={220}
+      height={57}
       draggable={false}
+      priority
     />
   );
 }

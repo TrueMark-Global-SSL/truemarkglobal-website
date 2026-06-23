@@ -10,8 +10,8 @@ import Contact from "@/components/Website/Home/Contact";
 
 
 export const metadata: Metadata = {
-  title: "True-Mark Global Standards & Solutions Limited",
-  description: "Explore True-Mark Global expert services in E-Learning, ISO Certification, Auditing, Outsourcing, and Inspection — delivering quality, compliance, and professional excellence."
+  title: "TrueMark Global Standards & Solutions Limited | ISO Certification & Conformity Assessment",
+  description: "TrueMark Global Standards and Solutions Limited (TMGSSL) is Nigeria's leading conformity assessment body. Expert ISO certification, auditing, inspection, and technical outsourcing solutions."
 };
 
 export default function Home() {
