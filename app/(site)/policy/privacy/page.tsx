@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Privacy policy of TrueMark Global Standards & Solutions Limited — how we collect, use, and protect your personal data.",
 };
 
-export default function PolicyPage() {
+export default function PrivacyPolicyPage() {
   return (
     <main className="pt-40 pb-20">
       <PrivacyPolicy />

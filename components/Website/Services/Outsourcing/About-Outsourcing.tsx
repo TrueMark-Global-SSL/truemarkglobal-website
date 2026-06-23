@@ -1,35 +1,99 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ChevronDown } from "lucide-react";
+
+const chips = [
+  { label: "Model",        value: "Flexible & Scalable" },
+  { label: "Suitable For", value: "Startups · SMEs · Corporates" },
+  { label: "Focus",        value: "Cost Reduction & Efficiency" },
+];
+
 const AboutOutsourcing = () => {
   return (
-    <section className="lg:grid  lg:place-content-center  transition-colors duration-300">
-      <div className="mx-auto w-screen max-w-screen-xl  px-4 py-12 sm:px-6 sm:py-24 lg:px-10 lg:py-25">
-        <div className=" text-center">
+    <div className="bg-[#f8faf9] border-b border-slate-200 px-4 md:px-8 2xl:px-0">
+      <div className="mx-auto max-w-5xl">
 
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">
-             Outsourcing
-            <strong className="text-[#387467] dark:text-[#387467]"> Services </strong>
-          </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-14 items-center py-12 lg:py-16">
 
-          <p className="mt-[4rem] text-base text-pretty text-gray-700 dark:text-gray-300 sm:text-lg/relaxed">
-            Outsourcing is the strategic practice of engaging external
-            service providers to manage specific business operations,
-            processes, or functions. This approach enables organizations to
-            concentrate on their core competencies, reduce internal workload,
-            control costs, and gain access to
-            industry-leading expertise and technology without having
-            to manage those functions in-house
-          </p>
-          <p className="mt-4 text-base text-pretty text-gray-700 dark:text-gray-300 sm:text-lg/relaxed">
-            At TrueMark Global Standards & Solutions Limited, we offer comprehensive,
-            scalable, and customized outsourcing solutions designed
-            to meet your business objectives efficiently and effectively.
-            Whether you are a startup, SME, or large corporation,
-            our outsourcing services help you drive growth, reduce risks, and improve overall performance.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, x: -22 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.55 }}
+            className="lg:col-span-3"
+          >
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#387467] mb-5">
+              TMGSSL Services
+            </p>
 
+            <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.08] mb-5">
+              Outsourcing
+              <br />
+              <span className="text-[#387467]">Services</span>
+            </h1>
+
+            <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-lg">
+              Strategic delegation of non-core business functions to experienced specialists — freeing
+              your team to focus on what matters most while we deliver measurable results.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/support"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#387467] px-6 py-3 text-sm font-bold text-white hover:bg-[#2d5e53] transition-all shadow-sm hover:shadow-md"
+              >
+                Get in Touch
+                <ArrowRight size={14} />
+              </Link>
+              <a
+                href="#service-content"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 hover:border-[#387467]/30 hover:bg-[#387467]/3 transition-all"
+              >
+                See details
+                <ChevronDown size={14} />
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 22 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.55, delay: 0.15 }}
+            className="lg:col-span-2"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-md">
+              <Image
+                src="/images/sectors/industry4.jpg"
+                alt="Outsourcing Services — TMGSSL"
+                width={560}
+                height={420}
+                className="w-full object-cover h-[260px] lg:h-[360px]"
+              />
+              <div className="absolute bottom-4 left-4 rounded-xl bg-white/92 backdrop-blur-sm px-4 py-2.5 shadow-lg">
+                <span className="text-xs font-bold text-slate-800">Professional Outsourcing Solutions</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.3 }}
+          className="border-t border-slate-200 py-5 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-200"
+        >
+          {chips.map((chip, i) => (
+            <div key={i} className="px-0 sm:px-6 first:pl-0 last:pr-0 py-3 sm:py-0">
+              <p className="text-[11px] font-black uppercase tracking-widest text-slate-400 mb-0.5">{chip.label}</p>
+              <p className="text-sm font-semibold text-slate-700">{chip.value}</p>
+            </div>
+          ))}
+        </motion.div>
+
       </div>
-    </section>
-);
+    </div>
+  );
 };
 
 export default AboutOutsourcing;

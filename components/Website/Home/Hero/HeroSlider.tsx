@@ -8,129 +8,162 @@ import { ReactTyped } from "react-typed";
 import { CheckCircle, Globe, Shield, ArrowRight } from "lucide-react";
 
 const slides = [
-    {
-    id: 2,
-    image: "/images/slide/Slide-2.jpg",
+  {
+    id: 1,
+    image: "/images/about/cert1.jpg",
+    bgPosition: "center center",
     headline: "Get ISO Certified From Anywhere",
-    subHeadline: "Scale your professional credibility with our internationally recognized online certification programs.",
+    subHeadline: "Scale your professional credibility with our internationally recognised online certification programs.",
     highlight: "Empowering",
     typedWords: ["Quality Experts", "Remote Learners", "Compliance Officers"],
     primaryBtn: "Explore Courses",
+    primaryHref: "/courses",
     secondaryBtn: "Accreditations",
+    secondaryHref: "/who_we_are",
   },
   {
-    id: 1,
-    image: "/images/slide/Slide-1.jpg",
+    id: 2,
+    image: "/images/sectors/industry1.jpg",
+    bgPosition: "center center",
+    headline: "World-Class Conformity Assessment",
+    subHeadline: "Nigeria's leading certification body delivering auditing, inspection, and verification services that meet global standards.",
+    highlight: "Trusted by",
+    typedWords: ["Manufacturers", "Healthcare Providers", "Energy Companies"],
+    primaryBtn: "Our Services",
+    primaryHref: "/certification",
+    secondaryBtn: "Learn More",
+    secondaryHref: "/who_we_are",
+  },
+  {
+    id: 3,
+    image: "/images/about/photo1.jpg",
+    bgPosition: "center top",
     headline: "Become an Endorsed Training Partner",
     subHeadline: "Join a global network of accredited professionals. We provide the framework, you provide the expertise.",
     highlight: "ISO 9001 Training for",
     typedWords: ["Auditors", "Consultants", "Partners"],
     primaryBtn: "Partner With Us",
+    primaryHref: "/support",
     secondaryBtn: "Contact Support",
+    secondaryHref: "/support",
   },
-
+  {
+    id: 4,
+    image: "/images/sectors/industry5.jpg",
+    bgPosition: "center center",
+    headline: "Where Infrastructure Meets Intelligence",
+    subHeadline: "Our platforms are engineered to handle complexity at scale — combining adaptive assessments, precision workflows, and real-time insight to keep your organisation ahead.",
+    highlight: "Engineered for",
+    typedWords: ["Intelligent Operations", "Connected Enterprises", "Data-Led Teams"],
+    primaryBtn: "Explore Services",
+    primaryHref: "/certification",
+    secondaryBtn: "About Us",
+    secondaryHref: "/who_we_are",
+  },
 ];
 
 export default function HeroSlider() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1200, // Slightly slower for a more luxurious feel
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 6500,
     fade: true,
+    pauseOnHover: false,
   };
 
   return (
-    <div className="relative overflow-hidden bg-black">
-      {/* Custom styles for Slick dots to make them look modern */}
-      <style jsx global>{`
-        .slick-dots { bottom: 30px; z-index: 30; }
-        .slick-dots li button:before { color: white; font-size: 12px; opacity: 0.5; }
-        .slick-dots li.slick-active button:before { color: #387467; opacity: 1; }
-      `}</style>
-
-      <Slider {...settings}>
+    <div className="relative overflow-hidden bg-slate-900">
+      <Slider {...settings} className="hero-slider">
         {slides.map((slide) => (
-          <div key={slide.id} className="outline-none focus:outline-none">
+          <div key={slide.id} className="outline-none">
             <div
-              className="relative w-full flex items-center justify-start min-h-[90vh] md:min-h-[95vh]"
+              className="relative w-full flex items-center min-h-[88vh] sm:min-h-[92vh]"
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: slide.bgPosition,
               }}
             >
-              {/* Refined Overlays: Subtle vignette rather than heavy blackout */}
-              <div className="absolute inset-0 bg-black/30 z-10" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10 w-full md:w-3/4" />
+              {/* Layered gradients for depth — no card box */}
+              <div className="absolute inset-0 bg-black/50 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10" />
 
-              <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12">
+              <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 py-20 md:py-0">
                 <motion.div
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 0, y: 35 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="max-w-3xl bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 rounded-3xl shadow-2xl"
+                  transition={{ duration: 0.85, ease: "easeOut" }}
+                  className="max-w-2xl"
                 >
                   {/* Authority Badge */}
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8 backdrop-blur-sm">
-                    <Shield className="text-[#387467] w-4 h-4" />
-                    <span className="text-white text-xs font-bold uppercase tracking-widest">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-sm">
+                    <Shield className="text-[#4aaf97] w-3.5 h-3.5 shrink-0" />
+                    <span className="text-white text-[11px] font-bold uppercase tracking-widest">
                       Global Standards
                     </span>
                   </div>
 
-                  {/* Typography: Switched from all-caps to Title Case for better readability */}
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+                  {/* Headline */}
+                  <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.1] mb-5 tracking-tight">
                     {slide.headline}
                   </h1>
 
-                  <p className="text-lg md:text-xl text-gray-200 font-medium leading-relaxed mb-8 max-w-xl">
+                  {/* Subheadline */}
+                  <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mb-6 max-w-lg">
                     {slide.subHeadline}
                   </p>
 
-                  {/* Typed Text Section */}
-                  <div className="flex flex-wrap items-center gap-3 mb-10">
-                    <span className="text-white text-xl md:text-2xl font-semibold">
+                  {/* Typed section */}
+                  <div className="flex flex-wrap items-center gap-2 mb-8">
+                    <span className="text-white text-base sm:text-lg md:text-xl font-semibold">
                       {slide.highlight}
                     </span>
-                    <span className="text-[#387467] font-bold bg-white px-4 py-2 rounded-xl text-xl md:text-2xl shadow-inner">
+                    <span className="text-[#387467] font-bold bg-white px-3 py-1 rounded-lg text-base sm:text-lg md:text-xl shadow-inner">
                       <ReactTyped
                         strings={slide.typedWords}
-                        typeSpeed={60}
-                        backSpeed={40}
-                        backDelay={2500}
+                        typeSpeed={65}
+                        backSpeed={42}
+                        backDelay={2800}
                         loop
                       />
                     </span>
                   </div>
 
-                  {/* Modern Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                    <button className="group relative flex items-center justify-center gap-3 bg-[#387467] text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide overflow-hidden transition-all hover:bg-[#2c5c52] hover:shadow-lg hover:shadow-[#387467]/30">
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3 mb-10">
+                    <a
+                      href={slide.primaryHref}
+                      className="group inline-flex items-center justify-center gap-2.5 bg-[#387467] text-white px-7 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-[#2c5c52] hover:shadow-lg hover:shadow-[#387467]/30 transition-all"
+                    >
                       {slide.primaryBtn}
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="flex items-center justify-center px-8 py-4 rounded-xl font-bold text-sm text-white uppercase tracking-wide border border-white/30 hover:bg-white/10 transition-colors backdrop-blur-sm">
+                    </a>
+                    <a
+                      href={slide.secondaryHref}
+                      className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl font-bold text-sm text-white uppercase tracking-wide border border-white/40 hover:bg-white/10 hover:border-white/60 transition-all"
+                    >
                       {slide.secondaryBtn}
-                    </button>
+                    </a>
                   </div>
 
-                  {/* Trust Indicators: Pill style */}
-                  <div className="flex flex-wrap items-center gap-4 pt-8 border-t border-white/20">
-                    <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
-                      <Shield className="text-[#387467] w-4 h-4" />
+                  {/* Trust pills */}
+                  <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-white/15">
+                    <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                      <Shield className="text-[#4aaf97] w-3.5 h-3.5" />
                       <span className="text-[11px] text-gray-200 font-bold uppercase tracking-wider">Accredited</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
-                      <Globe className="text-[#387467] w-4 h-4" />
+                    <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                      <Globe className="text-[#4aaf97] w-3.5 h-3.5" />
                       <span className="text-[11px] text-gray-200 font-bold uppercase tracking-wider">Worldwide</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
-                      <CheckCircle className="text-[#387467] w-4 h-4" />
+                    <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                      <CheckCircle className="text-[#4aaf97] w-3.5 h-3.5" />
                       <span className="text-[11px] text-gray-200 font-bold uppercase tracking-wider">ISO Compliant</span>
                     </div>
                   </div>

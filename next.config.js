@@ -38,29 +38,24 @@ const nextConfig = {
     ],
   },
 
-  // ✅ ISO Standard: Security Headers
-  // This protects your LMS from common attacks like Clickjacking and XSS
+  // Security Headers
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
+          // Prevent MIME-type sniffing
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          // Block clickjacking / iframe embedding by other sites
+          { key: 'X-Frame-Options', value: 'DENY' },
+          // Force HTTPS for 1 year, including subdomains (applied by browser on subsequent visits)
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+          // Referrer only sent to same origin on cross-origin requests
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          // Restrict access to sensitive browser APIs not needed by this site
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=()' },
+          // Opt out of Google's FLoC/Topics ad tracking
+          { key: 'X-Permitted-Cross-Domain-Policies', value: 'none' },
         ],
       },
     ];

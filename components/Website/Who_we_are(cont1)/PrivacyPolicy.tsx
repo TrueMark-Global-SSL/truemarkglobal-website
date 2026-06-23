@@ -1,135 +1,204 @@
 'use client';
-
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { FileText, ChevronLeft, ArrowRight } from 'lucide-react';
 import React from 'react';
 
-const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <motion.section
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-    viewport={{ once: true }}
-    className="mb-10"
-  >
-    <h2 className="text-2xl font-semibold mb-4 text-[#387467]">{title}</h2>
-    <div className="text-base leading-7 text-muted-foreground dark:text-gray-300 whitespace-pre-line">{children}</div>
-  </motion.section>
+const SectionHeading = ({ children }: { children: React.ReactNode }) => (
+  <div className="flex items-start gap-3 mb-4">
+    <div className="w-0.5 self-stretch rounded-full bg-[#387467] shrink-0 mt-1 min-h-[1.25rem]" />
+    <h2 className="text-lg font-bold text-slate-900">{children}</h2>
+  </div>
+);
+
+const PolicyList = ({ items }: { items: string[] }) => (
+  <ul className="space-y-2.5 mt-3">
+    {items.map((item, i) => (
+      <li key={i} className="flex gap-3">
+        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#387467] shrink-0" />
+        <span className="text-sm text-slate-600 leading-relaxed">{item}</span>
+      </li>
+    ))}
+  </ul>
 );
 
 const PrivacyPolicy = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <motion.h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#387467]"
-      >
-        PRIVACY POLICY
-      </motion.h1>
+    <section className="px-4 md:px-8 2xl:px-0 pb-24">
+      <div className="mx-auto max-w-3xl">
 
-      <Section title="Introduction">
-        This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
-        We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
-      </Section>
+        {/* Document header card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+          className="border border-slate-200 rounded-2xl p-8 mb-12 bg-white shadow-sm"
+        >
+          <div className="flex items-start gap-4">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#387467]/8 border border-[#387467]/15">
+              <FileText size={20} className="text-[#387467]" strokeWidth={1.75} />
+            </div>
+            <div>
+              <span className="inline-block text-[11px] font-black uppercase tracking-widest text-[#387467] bg-[#387467]/8 rounded-md px-2 py-0.5 mb-2">
+                Legal & Privacy
+              </span>
+              <h1 className="text-2xl md:text-3xl font-extrabold text-slate-900">
+                Privacy Policy
+              </h1>
+            </div>
+          </div>
 
-      <Section title="Interpretation and Definitions">
-        <strong>INTERPRETATION</strong>
-        The words of which the initial letter is capitalized have meanings defined under the following conditions.
-        The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+          <div className="mt-6 pt-5 border-t border-slate-100 flex flex-wrap gap-x-8 gap-y-3">
+            {[
+              { label: "Organisation", value: "TrueMark Global Standards & Solutions Limited" },
+              { label: "Jurisdiction", value: "Nigeria" },
+              { label: "Review Cycle", value: "Annual" },
+            ].map((m, i) => (
+              <div key={i}>
+                <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-0.5">{m.label}</p>
+                <p className="text-xs font-semibold text-slate-700">{m.value}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
-        <strong>DEFINITIONS</strong>
-        For the purposes of this Privacy Policy:
-        - Account means a unique account created for You to access our Service or parts of our Service.
-        - Company refers to Standards and Best Practice (SandBP).
-        - Cookies are small files that are placed on Your device.
-        - Country refers to: Nigeria
-        - Device means any device that can access the Service.
-        - Personal Data is any information that relates to an identified or identifiable individual.
-        - Service refers to the Website.
-        - Service Provider means any third-party that processes data on behalf of the Company.
-        - Usage Data refers to data collected automatically.
-        - Website refers to Standards and Best Practice, accessible from http://www.sandbp.net
-        - You means the individual or entity using the Service.
-      </Section>
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }}
+          className="space-y-12"
+        >
 
-      <Section title="Collecting and Using Your Personal Data">
-        <strong>Types of Data Collected</strong>
-        - Personal Data: Email Address, First name and last name, Phone number
-        - Usage Data: IP address, browser type/version, pages visited, time/date of visit, device identifiers, etc.
-      </Section>
+          {/* Introduction */}
+          <div>
+            <SectionHeading>Introduction</SectionHeading>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              This Privacy Policy describes the policies and procedures of TrueMark Global Standards &amp;
+              Solutions Limited (TMGSSL) on the collection, use, and disclosure of your information when you
+              use our services, and explains your privacy rights and how applicable law protects you. By using
+              our services, you agree to the collection and use of information as described in this policy.
+            </p>
+          </div>
 
-      <Section title="Tracking Technologies and Cookies">
-        We use Cookies and similar tracking technologies to monitor activity on Our Service.
-        Cookies may be “Persistent” or “Session”:
-        - Necessary / Essential Cookies
-        - Cookies Policy / Notice Acceptance Cookies
-        - Functionality Cookies
-        These help in providing and improving the Service.
-      </Section>
+          {/* Definitions */}
+          <div>
+            <SectionHeading>Key Definitions</SectionHeading>
+            <PolicyList items={[
+              "Account — a unique account created for you to access our services or parts thereof.",
+              "Company — refers to TrueMark Global Standards & Solutions Limited (TMGSSL).",
+              "Cookies — small files placed on your device by our website.",
+              "Personal Data — any information that relates to an identified or identifiable individual.",
+              "Service — refers to the TMGSSL website and online platforms.",
+              "Service Provider — any third party that processes data on behalf of TMGSSL.",
+              "Usage Data — data collected automatically when you use our services (e.g. IP address, browser type, pages visited).",
+            ]} />
+          </div>
 
-      <Section title="Use of Your Personal Data">
-        The Company may use Personal Data for:
-        - Providing and maintaining the Service
-        - Managing Your Account
-        - Performing contracts
-        - Contacting You via various channels
-        - Providing promotional offers
-        - Business transfers
-        - Analysis and improvement purposes
-        Sharing may occur with:
-        - Service Providers
-        - Business partners
-        - Affiliates
-        - Other users (in public areas)
-        - With Your consent
-      </Section>
+          {/* Data Collected */}
+          <div>
+            <SectionHeading>Data We Collect</SectionHeading>
+            <p className="text-sm text-slate-600 leading-relaxed mb-3">We collect the following types of information:</p>
+            <div className="space-y-3">
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-black uppercase tracking-wider text-slate-400 mb-2">Personal Data</p>
+                <p className="text-sm text-slate-600">Email address, first and last name, phone number — provided voluntarily when you register or contact us.</p>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-black uppercase tracking-wider text-slate-400 mb-2">Usage Data</p>
+                <p className="text-sm text-slate-600">IP address, browser type and version, pages visited, time and date of visit, and device identifiers — collected automatically.</p>
+              </div>
+            </div>
+          </div>
 
-      <Section title="Retention of Your Personal Data">
-        We retain Your data only as long as necessary to fulfill the purposes in this Privacy Policy, comply with legal obligations, resolve disputes, and enforce policies.
-      </Section>
+          {/* How We Use Data */}
+          <div>
+            <SectionHeading>How We Use Your Data</SectionHeading>
+            <PolicyList items={[
+              "To provide and maintain our services.",
+              "To manage your account and service agreements.",
+              "To contact you via email, phone, or other channels with relevant information.",
+              "To improve and analyse the performance of our services.",
+              "To comply with legal obligations.",
+            ]} />
+          </div>
 
-      <Section title="Transfer of Your Personal Data">
-        Your information may be transferred to locations with different data protection laws.
-        Your submission of data represents consent to that transfer. We ensure your data is securely handled.
-      </Section>
+          {/* Sharing */}
+          <div>
+            <SectionHeading>Sharing of Your Data</SectionHeading>
+            <p className="text-sm text-slate-600 leading-relaxed mb-3">
+              TMGSSL may share your data only in the following limited circumstances:
+            </p>
+            <PolicyList items={[
+              "With Service Providers who assist in delivering our services — subject to confidentiality obligations.",
+              "In the event of a business transfer, merger, or acquisition — where your data may form part of the transferred assets.",
+              "With regulatory or law enforcement authorities where legally required.",
+              "With your explicit prior consent.",
+            ]} />
+          </div>
 
-      <Section title="Delete Your Personal Data">
-        You have the right to delete or request deletion of your personal data.
-        - You may do this via account settings or by contacting us.
-        - We may retain certain data if legally required.
-      </Section>
+          {/* Retention */}
+          <div>
+            <SectionHeading>Data Retention</SectionHeading>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              We retain your personal data only for as long as necessary to fulfil the purposes described in
+              this policy, comply with legal obligations, resolve disputes, and enforce our agreements.
+              When no longer required, data is securely deleted or anonymised.
+            </p>
+          </div>
 
-      <Section title="Disclosure of Your Personal Data">
-        <strong>Business Transactions</strong>
-        If the Company is involved in a merger or sale, your data may be transferred.
-        <strong>Law Enforcement</strong>
-        We may disclose data if legally required.
-        <strong>Other Legal Requirements</strong>
-        We may disclose Your data to:
-        - Comply with legal obligations
-        - Defend Company rights
-        - Prevent wrongdoing
-        - Protect public safety
-        - Avoid liability
-      </Section>
+          {/* Rights */}
+          <div>
+            <SectionHeading>Your Rights</SectionHeading>
+            <p className="text-sm text-slate-600 leading-relaxed mb-3">
+              You have the right to:
+            </p>
+            <PolicyList items={[
+              "Request access to the personal data we hold about you.",
+              "Request correction of inaccurate or incomplete data.",
+              "Request deletion of your personal data, subject to legal retention requirements.",
+              "Withdraw consent at any time where processing is based on consent.",
+              "Contact us to raise concerns about how your data is handled.",
+            ]} />
+          </div>
 
-      <Section title="Security of Your Personal Data">
-        We strive to protect Your data but cannot guarantee 100% security.
-      </Section>
+          {/* Security */}
+          <div>
+            <SectionHeading>Data Security</SectionHeading>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              TMGSSL uses commercially reasonable technical and organisational measures to protect your
+              personal data from unauthorised access, alteration, disclosure, or destruction. However, no
+              method of transmission over the internet or electronic storage is 100% secure.
+            </p>
+          </div>
 
-      <Section title="Links to Other Websites">
-        Our Service may contain links to other websites not operated by Us. Please review their privacy policies.
-        We are not responsible for external content or practices.
-      </Section>
+          {/* Changes */}
+          <div>
+            <SectionHeading>Changes to This Policy</SectionHeading>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              We may update this Privacy Policy from time to time. We will notify you of material changes by
+              email or by placing a prominent notice on our website. We encourage you to review this policy
+              periodically. Continued use of our services after changes constitutes acceptance.
+            </p>
+          </div>
 
-      <Section title="Changes to This Privacy Policy">
-        We may update this policy from time to time.
-        - We will notify You by email or a notice on Our Service.
-        - Please review this policy periodically.
-      </Section>
-    </div>
+          {/* Note */}
+          <div className="rounded-xl bg-slate-50 border border-slate-200 px-6 py-5">
+            <p className="text-xs text-slate-500 italic leading-relaxed">
+              For questions about this Privacy Policy or to exercise your data rights, please contact
+              TrueMark Global Standards &amp; Solutions Limited (TMGSSL) through our support page.
+            </p>
+          </div>
+
+          {/* CTA */}
+          <div className="flex items-center gap-4 pt-2">
+            <Link href="/support"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#387467] px-7 py-3.5 text-sm font-bold text-white hover:bg-[#2d5e53] transition-all shadow-sm hover:shadow-md"
+            >
+              Contact Support
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

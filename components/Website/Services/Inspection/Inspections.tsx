@@ -1,322 +1,187 @@
 "use client";
-
 import { motion } from "framer-motion";
-import Image from "next/image";
-import SectionHeader from "@/components/Website/Common/SectionHeader";
+import Link from "next/link";
+import {
+  Package, Truck, Building2, Wrench,
+  Cpu, Leaf, ShieldAlert, Factory, Globe,
+  MessageSquare, FileText, ClipboardList, MapPin,
+  Search, ClipboardCheck, AlertCircle, Scale, Award,
+  ArrowRight,
+} from "lucide-react";
 
-const TM_Inspection = () => {
+const inspectionTypes = [
+  {
+    icon: Package,
+    title: "Product Inspection",
+    desc: "Pre-production, during-production, and pre-shipment inspections to verify product quality, dimensions, and conformance to specifications.",
+  },
+  {
+    icon: Factory,
+    title: "Manufacturing & Process",
+    desc: "Assessment of production facilities, manufacturing processes, and process controls against quality standards and customer requirements.",
+  },
+  {
+    icon: Building2,
+    title: "Facility & Infrastructure",
+    desc: "Structural, safety, and compliance inspection of facilities — including warehouses, plants, offices, and commercial premises.",
+  },
+  {
+    icon: Wrench,
+    title: "Equipment & Machinery",
+    desc: "Technical inspection of equipment, machinery, and lifting gear to ensure operational safety and regulatory compliance.",
+  },
+  {
+    icon: Truck,
+    title: "Pre-Shipment Inspection",
+    desc: "Verification of goods before dispatch — quantity, quality, packaging, and labelling — reducing the risk of rejected shipments.",
+  },
+  {
+    icon: Cpu,
+    title: "Technical Systems",
+    desc: "Inspection of electrical, mechanical, and process control systems against defined safety and performance standards.",
+  },
+  {
+    icon: Leaf,
+    title: "Environmental Inspection",
+    desc: "On-site evaluation of environmental management practices, waste handling, and compliance with environmental legislation.",
+  },
+  {
+    icon: ShieldAlert,
+    title: "Health & Safety Inspection",
+    desc: "Workplace safety assessments covering risk identification, PPE usage, emergency procedures, and OHS compliance.",
+  },
+  {
+    icon: Globe,
+    title: "Trade & Import/Export",
+    desc: "Regulatory compliance checks on goods crossing borders — ensuring conformity with destination country requirements.",
+  },
+];
+
+const processSteps = [
+  { step: "01", icon: MessageSquare,  title: "Enquiry & Scoping",        desc: "Understanding what is to be inspected, applicable standards, client requirements, and the inspection location." },
+  { step: "02", icon: FileText,       title: "Proposal Issued",          desc: "A tailored inspection proposal is issued detailing scope, methodology, deliverables, and fees." },
+  { step: "03", icon: ClipboardList,  title: "Instruction & Scheduling", desc: "Formal instruction received, inspection team assigned, and schedule confirmed with all parties." },
+  { step: "04", icon: MapPin,         title: "Mobilisation",             desc: "Inspector mobilised to site with defined checklists, calibrated equipment, and reference standards." },
+  { step: "05", icon: Search,         title: "On-Site Inspection",       desc: "Physical examination, sampling, measurement, and observation carried out against defined criteria." },
+  { step: "06", icon: ClipboardCheck, title: "Testing & Sampling",       desc: "Samples collected and tested (in-situ or at accredited laboratory) as required by the inspection scope." },
+  { step: "07", icon: AlertCircle,    title: "Non-Conformance Review",   desc: "All deviations from specified requirements are recorded, classified, and communicated to the client." },
+  { step: "08", icon: Scale,          title: "Report Preparation",       desc: "A comprehensive inspection report compiled — detailing findings, photographic evidence, and conclusions." },
+  { step: "09", icon: Award,          title: "Certificate Issued",       desc: "Where applicable, an inspection certificate is issued as formal evidence of compliance and completion." },
+];
+
+const fade = (delay = 0) => ({
+  initial: { opacity: 0, y: 18 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.55, delay },
+  viewport: { once: true },
+});
+
+const TM_Inspections = () => {
   return (
-    <div className='pb-[6rem]'>
+    <section id="service-content" className="pb-24 px-4 md:px-8 2xl:px-0 pt-16">
+      <div className="mx-auto max-w-5xl space-y-24">
 
-      {/* <!-- ===== About Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30 ">
-        <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
+        {/* Inspection Types */}
+        <motion.div {...fade(0.05)}>
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Types of Inspection We Perform</h2>
+          <p className="text-base text-slate-500 mb-10 max-w-2xl">
+            TMGSSL delivers inspection services across nine specialist domains — covering products,
+            facilities, equipment, and trade compliance.
+          </p>
 
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
-            >
-              <Image
-                // src="/images/about/about-light-01.png"
-                src="/images/about/inspect1.jpg"
-                alt="About"
-                className="rounded-2xl dark:hidden "
-                width={600} height={100}
-              />
-              <Image
-                // src="/images/about/about-dark-01.png"
-                src="/images/about/inspect1.jpg"
-                alt="About"
-                className="rounded-2xl hidden dark:block "
-                width={600} height={100}
-              />
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right md:w-1/2"
-            >
-              <span className="font-bold uppercase text-black dark:text-white mb-8">
-                 Where We Focus
-              </span>
-
-              <div className="mt-7.5 flex items-center gap-5">
-                <div
-                  className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    01
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Quality Inspections
-                  </h3>
-
-                  <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
-                    We conduct in-depth inspections to detect any defects,
-                    irregularities, or deviations from approved standards.
-                    Our approach ensures that your products are
-                    of the highest quality, consistently meeting both
-                    customer and industry expectations.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-7.5 flex items-center gap-5">
-                <div
-                  className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    02
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Compliance Inspections
-                  </h3>
-                  <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
-                    We help ensure that your operations, processes, and
-                    final outputs comply with relevant local and
-                    international regulatory requirements.
-                    Whether it's ISO standards or sector-specific regulations,
-                    we safeguard your reputation and legal standing.
-                  </p>
-
-                </div>
-              </div>
-
-              <div className="mt-7.5 flex items-center gap-5">
-                <div
-                  className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    03
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Safety Inspections
-                  </h3>
-                  <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
-                    Our safety inspections are designed to assess the operational
-                    safety of your facilities, equipment, and products.
-                    We identify potential hazards
-                    early and help implement preventive measures to protect
-                    workers, end users, and stakeholders.
-                  </p>
-
-
-                </div>
-              </div>
-              <div className="mt-7.5 flex items-center gap-5">
-                <div
-                  className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    04
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Pre-shipment Inspections
-                  </h3>
-
-                  <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
-                    Before your goods are dispatched, we perform final
-                    inspections to confirm that they meet agreed-upon quality,
-                    quantity, labeling, and packaging
-                    specifications. This helps prevent returns,
-                    disputes, or rejections at the point of delivery.
-                  </p>
-
-                </div>
-              </div>
-            </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100 rounded-2xl overflow-hidden border border-slate-100">
+            {inspectionTypes.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.04 }}
+                  viewport={{ once: true }}
+                  className="group bg-white p-7 hover:bg-[#387467]/3 transition-colors"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 border border-slate-100 mb-4 group-hover:border-[#387467]/20 group-hover:bg-[#387467]/5 transition-colors">
+                    <Icon size={18} className="text-[#387467]" strokeWidth={1.75} />
+                  </div>
+                  <h3 className="text-sm font-bold text-slate-900 mb-1.5">{item.title}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
-        </div>
-      </section>
-      {/* <!-- ===== About End ===== --> */}
+        </motion.div>
 
+        {/* Inspection Process */}
+        <motion.div {...fade(0.07)}>
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">The Inspection Process</h2>
+          <p className="text-base text-slate-500 mb-12 max-w-2xl">
+            Every TMGSSL inspection follows a structured 9-step process — from initial scoping to
+            final certificate issuance.
+          </p>
 
-      <section>
-        <div className="mx-auto max-w-c-1235 px-4 py-10 md:px-8 2xl:px-0 pb-[6rem]">
-          <motion.div
-            variants={{
-              hidden: {
-                opacity: 0,
-                y: 20,
-              },
-              visible: {
-                opacity: 1,
-                y: 0,
-              },
-            }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 1, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="animate_top "
+          <div className="space-y-0">
+            {processSteps.map((step, i) => {
+              const Icon = step.icon;
+              const isLast = i === processSteps.length - 1;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -14 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.04 }}
+                  viewport={{ once: true }}
+                  className="flex gap-5"
+                >
+                  <div className="flex flex-col items-center shrink-0">
+                    <div className={`flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-bold z-10 ${
+                      isLast
+                        ? "border-[#387467] bg-[#387467] text-white"
+                        : "border-[#387467] bg-white text-[#387467]"
+                    }`}>
+                      {step.step}
+                    </div>
+                    {!isLast && (
+                      <div className="w-px flex-1 bg-slate-200 my-1.5" style={{ minHeight: "2rem" }} />
+                    )}
+                  </div>
+
+                  <div className={`flex-1 ${isLast ? "pb-0" : "pb-7"}`}>
+                    <div className="flex items-center gap-2.5 mb-1">
+                      <Icon size={14} className="text-slate-400 shrink-0" strokeWidth={1.75} />
+                      <h3 className="text-base font-bold text-slate-900">{step.title}</h3>
+                    </div>
+                    <p className="text-sm text-slate-500 leading-relaxed">{step.desc}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        {/* Footer CTA */}
+        <motion.div
+          {...fade(0.08)}
+          className="rounded-2xl bg-slate-900 p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+        >
+          <div>
+            <p className="text-lg font-bold text-white">Ready to request an inspection?</p>
+            <p className="text-sm text-white/50 mt-1">
+              Tell us what you need inspected and our team will prepare a tailored proposal within 48 hours.
+            </p>
+          </div>
+          <Link
+            href="/support"
+            className="shrink-0 flex items-center gap-2 rounded-xl bg-[#387467] px-7 py-3.5 text-sm font-bold text-white hover:bg-[#2d5e53] transition-all shadow-sm hover:shadow-md"
           >
+            Request Inspection
+            <ArrowRight size={14} />
+          </Link>
+        </motion.div>
 
-            <SectionHeader
-              headerInfo={{
-                title: `Why Inspection Services Matter`,
-                subtitle: `The Importance of Professional Inspection`,
-              }}
-            />
-
-            <ul className="text-center space-y-6 gap-8 text-1xl text-gray-700 dark:text-gray-300 mt-[3rem]">
-              <li>
-                <strong>Quality Assurance:</strong> Ensure consistent, reliable output that meets set standards.
-              </li>
-              <li>
-                <strong>Customer Satisfaction:</strong> Deliver products that customers can trust.
-              </li>
-              <li>
-                <strong>Compliance & Certification:</strong> Avoid penalties and meet industry requirements.
-              </li>
-              <li>
-                <strong>Operational Efficiency:</strong> Detect and fix problems before they escalate.
-              </li>
-              <li>
-                <strong>Risk Reduction:</strong> Identify and eliminate potential safety or quality failures.
-              </li>
-            </ul>
-
-          </motion.div>
-        </div>
-      </section>
-
-
-      {/* <!-- ===== About Two Start ===== --> */}
-      <section>
-        <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left md:w-1/2"
-            >
-              <h4 className="font-medium uppercase text-black dark:text-white">
-                Inspection Process
-              </h4>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                A Step-by-Step Breakdown of Our Inspection Workflow:
-              </h2>
-              <ul className="space-y-4 text-1xl text-gray-700 dark:text-gray-300">
-                <li>
-                  <strong>1. Enquiry Stage:</strong> Initial contact where we receive and evaluate your inspection
-                  request and gather basic project details.
-                </li>
-                <li>
-                  <strong>2. Proposal and Negotiation Stage:</strong> We provide a tailored service proposal, including
-                  scope, methodology, and cost, followed by discussions to align with your expectations.
-                </li>
-                <li>
-                  <strong>3. Application Stage:</strong> Once terms are agreed upon, we formalize the process by
-                  documenting your request and registering the inspection activity.
-                </li>
-                <li>
-                  <strong>4. Factory Selection:</strong> We identify and approve the manufacturing or operational
-                  site(s) where inspections will be conducted.
-                </li>
-                <li>
-                  <strong>5. Functional Sample Review:</strong> Review and test functional samples to ensure they meet
-                  predefined performance and design expectations.
-                </li>
-                <li>
-                  <strong>6. Product Specification Verification:</strong> Cross-check technical documents, drawings, and
-                  standards to ensure the product matches your specifications.
-                </li>
-                <li>
-                  <strong>7. In-process Inspection:</strong> Monitor the production process to ensure quality is
-                  maintained at every critical stage.
-                </li>
-                <li>
-                  <strong>8. Before-shipment Inspection:</strong> Conduct final quality and compliance checks before the
-                  goods are packed and shipped.
-                </li>
-                <li>
-                  <strong>9. Issuance of Inspection Certificate:</strong> Provide a comprehensive inspection certificate
-                  that confirms conformity and gives you confidence in your product delivery.
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
-            >
-              <Image
-                src="/images/about/inspect2.jpg"
-                alt="Inspection process"
-                className="rounded-2xl dark:hidden"
-                width={600}
-                height={100}
-              />
-              <Image
-                src="/images/about/inspect2.jpg"
-                alt="Inspection process"
-                className="rounded-2xl hidden dark:block"
-                width={600}
-                height={100}
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- ===== About Two End ===== --> */}
-    </div>
+      </div>
+    </section>
   );
 };
 
-export default TM_Inspection;
+export default TM_Inspections;
